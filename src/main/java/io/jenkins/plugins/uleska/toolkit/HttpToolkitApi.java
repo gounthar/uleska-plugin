@@ -4,7 +4,6 @@ import com.google.gson.reflect.TypeToken;
 import hudson.model.TaskListener;
 import io.jenkins.plugins.uleska.api.BaseHttpApi;
 import io.jenkins.plugins.uleska.api.HttpFactory;
-import org.apache.hc.core5.http.ClassicHttpResponse;
 
 import java.lang.reflect.Type;
 import java.util.Collection;
