@@ -13,7 +13,7 @@ import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.jenkinsci.plugins.plaincredentials.StringCredentials;
 import org.kohsuke.stapler.QueryParameter;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -67,7 +67,7 @@ public class UleskaGlobalConfiguration extends GlobalConfiguration {
     }
 
     @Override
-    public boolean configure(StaplerRequest req, JSONObject json) {
+    public boolean configure(StaplerRequest2 req, JSONObject json) {
         List<UleskaInstance> instanceList = req.bindJSONToList(UleskaInstance.class, json.get("uleskaInstance"));
         //noinspection ToArrayCallWithZeroLengthArrayArgument
         setUleskaInstances(instanceList.toArray(new UleskaInstance[instanceList.size()]));
